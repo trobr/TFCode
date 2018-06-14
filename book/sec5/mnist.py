@@ -101,6 +101,7 @@ def train(mnist):
 
             xs, ys = mnist.train.next_batch(BATCH_SIZE)
             sess.run(train_op, feed_dict={x: xs, y_: ys})
+            print('1')
 
         test_acc = sess.run(accuracy, feed_dict=validate_feed)
         print('after %d train, validation acc using average model is %g' %
